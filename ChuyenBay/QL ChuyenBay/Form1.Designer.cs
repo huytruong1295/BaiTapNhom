@@ -185,7 +185,7 @@
             this.btnadd.TabIndex = 6;
             this.btnadd.Text = "Thêm";
             this.btnadd.UseVisualStyleBackColor = true;
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            this.btnadd.Click += new System.EventHandler(this.Form1_Load);
             // 
             // btndel
             // 
@@ -216,6 +216,7 @@
             this.btnexit.TabIndex = 9;
             this.btnexit.Text = "Thoát";
             this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
             // dgvkhachhang
             // 
