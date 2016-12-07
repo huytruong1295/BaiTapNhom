@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\ChuyenBay\QL-Chuyen-Bay\QL ChuyenBay\bin\Debug\QL ChuyenBay.exe
+C:\Users\User\Desktop\ChuyenBay\QL-Chuyen-Bay\QL ChuyenBay\bin\Debug\QL ChuyenBay.pdb
+C:\Users\User\Desktop\ChuyenBay\QL-Chuyen-Bay\QL ChuyenBay\obj\x86\Debug\QL_ChuyenBay.Form1.resources
+C:\Users\User\Desktop\ChuyenBay\QL-Chuyen-Bay\QL ChuyenBay\obj\x86\Debug\QL_ChuyenBay.Properties.Resources.resources
+C:\Users\User\Desktop\ChuyenBay\QL-Chuyen-Bay\QL ChuyenBay\obj\x86\Debug\QL ChuyenBay.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\ChuyenBay\QL-Chuyen-Bay\QL ChuyenBay\obj\x86\Debug\QL ChuyenBay.exe
+C:\Users\User\Desktop\ChuyenBay\QL-Chuyen-Bay\QL ChuyenBay\obj\x86\Debug\QL ChuyenBay.pdb
+C:\Users\User\Desktop\QLChuyenBay\ChuyenBay\QL ChuyenBay\obj\x86\Debug\QL ChuyenBay.exe
+C:\Users\User\Desktop\QLChuyenBay\ChuyenBay\QL ChuyenBay\obj\x86\Debug\QL ChuyenBay.pdb
