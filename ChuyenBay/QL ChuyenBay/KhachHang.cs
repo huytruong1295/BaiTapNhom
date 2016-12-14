@@ -5,25 +5,26 @@ using System.Text;
 
 namespace QL_ChuyenBay
 {
-    public class KhachHang //Lop Nhan vien
+    //Lớp Hành Khách
+    public class KhachHang 
     {
         //
-        public string ID { get; set; }
-        public string LastName { get; set; }
-        public string Firstname { get; set; }
-        public string Address { get; set; }
-        public string Phone { get; set; }
+        public string MaHK { get; set; }
         public string MaVe { get; set; }
-
+        public string HoHK { get; set; }
+        public string TenHK { get; set; }
+        public string SoDT { get; set; }
+        public string DiaChi { get; set; }
+        
         //
-        public KhachHang(string id, string lastName, string firstName, string address, string phone, string MaVe)
+        public KhachHang(string MaHK, string MaVe, string HoHK, string TenHK, string sodt, string dc)
         {
-            this.ID = id;
-            this.LastName = lastName;
-            this.Firstname = firstName;
-            this.Address = address;
-            this.Phone = phone;
+            this.MaHK = MaHK;
             this.MaVe = MaVe;
+            this.HoHK = HoHK;
+            this.TenHK = TenHK;
+            this.SoDT = sodt;
+            this.DiaChi = dc;           
         }
     }
 }
