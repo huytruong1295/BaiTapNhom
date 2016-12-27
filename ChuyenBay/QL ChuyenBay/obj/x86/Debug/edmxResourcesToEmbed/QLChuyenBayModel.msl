@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLChuyenBayVaVeMayBayModelStoreContainer" CdmEntityContainer="QLChuyenBayVaVeMayBayEntities">
+    <EntitySetMapping Name="ChuyenBays">
+      <EntityTypeMapping TypeName="QLChuyenBayVaVeMayBayModel.ChuyenBay">
+        <MappingFragment StoreEntitySet="ChuyenBay">
+          <ScalarProperty Name="MaCB" ColumnName="MaCB" />
+          <ScalarProperty Name="MaHT" ColumnName="MaHT" />
+          <ScalarProperty Name="MaMB" ColumnName="MaMB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoiTraVes">
+      <EntityTypeMapping TypeName="QLChuyenBayVaVeMayBayModel.DoiTraVe">
+        <MappingFragment StoreEntitySet="DoiTraVe">
+          <ScalarProperty Name="MaLP" ColumnName="MaLP" />
+          <ScalarProperty Name="MaVe" ColumnName="MaVe" />
+          <ScalarProperty Name="LePhi" ColumnName="LePhi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HangTrinhs">
+      <EntityTypeMapping TypeName="QLChuyenBayVaVeMayBayModel.HangTrinh">
+        <MappingFragment StoreEntitySet="HangTrinh">
+          <ScalarProperty Name="MaHT" ColumnName="MaHT" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HanhKhaches">
+      <EntityTypeMapping TypeName="QLChuyenBayVaVeMayBayModel.HanhKhach">
+        <MappingFragment StoreEntitySet="HanhKhach">
+          <ScalarProperty Name="MaHK" ColumnName="MaHK" />
+          <ScalarProperty Name="MaVe" ColumnName="MaVe" />
+          <ScalarProperty Name="HoHK" ColumnName="HoHK" />
+          <ScalarProperty Name="TenHK" ColumnName="TenHK" />
+          <ScalarProperty Name="SoDT" ColumnName="SoDT" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LichBays">
+      <EntityTypeMapping TypeName="QLChuyenBayVaVeMayBayModel.LichBay">
+        <MappingFragment StoreEntitySet="LichBay">
+          <ScalarProperty Name="MaCB" ColumnName="MaCB" />
+          <ScalarProperty Name="MaMB" ColumnName="MaMB" />
+          <ScalarProperty Name="MaHT" ColumnName="MaHT" />
+          <ScalarProperty Name="GioNgayBay" ColumnName="GioNgayBay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MayBays">
+      <EntityTypeMapping TypeName="QLChuyenBayVaVeMayBayModel.MayBay">
+        <MappingFragment StoreEntitySet="MayBay">
+          <ScalarProperty Name="MaMB" ColumnName="MaMB" />
+          <ScalarProperty Name="TenMB" ColumnName="TenMB" />
+          <ScalarProperty Name="LoaiMB" ColumnName="LoaiMB" />
+          <ScalarProperty Name="SoGheTG" ColumnName="SoGheTG" />
+          <ScalarProperty Name="SoGheDaDat" ColumnName="SoGheDaDat" />
+          <ScalarProperty Name="TongSoGhe" ColumnName="TongSoGhe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ves">
+      <EntityTypeMapping TypeName="QLChuyenBayVaVeMayBayModel.Ve">
+        <MappingFragment StoreEntitySet="Ve">
+          <ScalarProperty Name="MaVe" ColumnName="MaVe" />
+          <ScalarProperty Name="MaHK" ColumnName="MaHK" />
+          <ScalarProperty Name="MaCB" ColumnName="MaCB" />
+          <ScalarProperty Name="NgayGioBay" ColumnName="NgayGioBay" />
+          <ScalarProperty Name="NgayGioBan" ColumnName="NgayGioBan" />
+          <ScalarProperty Name="NoiBan" ColumnName="NoiBan" />
+          <ScalarProperty Name="GiaVe" ColumnName="GiaVe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

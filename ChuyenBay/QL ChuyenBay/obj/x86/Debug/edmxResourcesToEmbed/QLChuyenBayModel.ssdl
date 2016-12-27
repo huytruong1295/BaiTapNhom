@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLChuyenBayVaVeMayBayModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="QLChuyenBayVaVeMayBayModelStoreContainer">
+    <EntitySet Name="ChuyenBay" EntityType="QLChuyenBayVaVeMayBayModel.Store.ChuyenBay" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DoiTraVe" EntityType="QLChuyenBayVaVeMayBayModel.Store.DoiTraVe" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HangTrinh" EntityType="QLChuyenBayVaVeMayBayModel.Store.HangTrinh" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HanhKhach" EntityType="QLChuyenBayVaVeMayBayModel.Store.HanhKhach" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LichBay" EntityType="QLChuyenBayVaVeMayBayModel.Store.LichBay" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MayBay" EntityType="QLChuyenBayVaVeMayBayModel.Store.MayBay" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ve" EntityType="QLChuyenBayVaVeMayBayModel.Store.Ve" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ChuyenBay_HangTrinh" Association="QLChuyenBayVaVeMayBayModel.Store.FK_ChuyenBay_HangTrinh">
+      <End Role="HangTrinh" EntitySet="HangTrinh" />
+      <End Role="ChuyenBay" EntitySet="ChuyenBay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChuyenBay_MayBay" Association="QLChuyenBayVaVeMayBayModel.Store.FK_ChuyenBay_MayBay">
+      <End Role="MayBay" EntitySet="MayBay" />
+      <End Role="ChuyenBay" EntitySet="ChuyenBay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DoiTraVe_Ve" Association="QLChuyenBayVaVeMayBayModel.Store.FK_DoiTraVe_Ve">
+      <End Role="Ve" EntitySet="Ve" />
+      <End Role="DoiTraVe" EntitySet="DoiTraVe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LichBay_MayBay" Association="QLChuyenBayVaVeMayBayModel.Store.FK_LichBay_MayBay">
+      <End Role="MayBay" EntitySet="MayBay" />
+      <End Role="LichBay" EntitySet="LichBay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ve_ChuyenBay" Association="QLChuyenBayVaVeMayBayModel.Store.FK_Ve_ChuyenBay">
+      <End Role="ChuyenBay" EntitySet="ChuyenBay" />
+      <End Role="Ve" EntitySet="Ve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ve_HanhKhach" Association="QLChuyenBayVaVeMayBayModel.Store.FK_Ve_HanhKhach">
+      <End Role="HanhKhach" EntitySet="HanhKhach" />
+      <End Role="Ve" EntitySet="Ve" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ChuyenBay">
+    <Key>
+      <PropertyRef Name="MaCB" />
+    </Key>
+    <Property Name="MaCB" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="MaHT" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="MaMB" Type="nvarchar" Nullable="false" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="DoiTraVe">
+    <Key>
+      <PropertyRef Name="MaLP" />
+    </Key>
+    <Property Name="MaLP" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MaVe" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="LePhi" Type="numeric" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HangTrinh">
+    <Key>
+      <PropertyRef Name="MaHT" />
+    </Key>
+    <Property Name="MaHT" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="DiemDi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DiemDen" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HanhKhach">
+    <Key>
+      <PropertyRef Name="MaHK" />
+    </Key>
+    <Property Name="MaHK" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="MaVe" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="HoHK" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="TenHK" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SoDT" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LichBay">
+    <Key>
+      <PropertyRef Name="MaCB" />
+    </Key>
+    <Property Name="MaCB" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="MaMB" Type="nvarchar" MaxLength="8" />
+    <Property Name="MaHT" Type="nvarchar" MaxLength="8" />
+    <Property Name="GioNgayBay" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MayBay">
+    <Key>
+      <PropertyRef Name="MaMB" />
+    </Key>
+    <Property Name="MaMB" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="TenMB" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LoaiMB" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SoGheTG" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SoGheDaDat" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="TongSoGhe" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ve">
+    <Key>
+      <PropertyRef Name="MaVe" />
+    </Key>
+    <Property Name="MaVe" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="MaHK" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="MaCB" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="NgayGioBay" Type="datetime" Nullable="false" />
+    <Property Name="NgayGioBan" Type="datetime" Nullable="false" />
+    <Property Name="NoiBan" Type="nvarchar" MaxLength="50" />
+    <Property Name="GiaVe" Type="numeric" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ChuyenBay_HangTrinh">
+    <End Role="HangTrinh" Type="QLChuyenBayVaVeMayBayModel.Store.HangTrinh" Multiplicity="1" />
+    <End Role="ChuyenBay" Type="QLChuyenBayVaVeMayBayModel.Store.ChuyenBay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HangTrinh">
+        <PropertyRef Name="MaHT" />
+      </Principal>
+      <Dependent Role="ChuyenBay">
+        <PropertyRef Name="MaHT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChuyenBay_MayBay">
+    <End Role="MayBay" Type="QLChuyenBayVaVeMayBayModel.Store.MayBay" Multiplicity="1" />
+    <End Role="ChuyenBay" Type="QLChuyenBayVaVeMayBayModel.Store.ChuyenBay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MayBay">
+        <PropertyRef Name="MaMB" />
+      </Principal>
+      <Dependent Role="ChuyenBay">
+        <PropertyRef Name="MaMB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DoiTraVe_Ve">
+    <End Role="Ve" Type="QLChuyenBayVaVeMayBayModel.Store.Ve" Multiplicity="1" />
+    <End Role="DoiTraVe" Type="QLChuyenBayVaVeMayBayModel.Store.DoiTraVe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ve">
+        <PropertyRef Name="MaVe" />
+      </Principal>
+      <Dependent Role="DoiTraVe">
+        <PropertyRef Name="MaVe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LichBay_MayBay">
+    <End Role="MayBay" Type="QLChuyenBayVaVeMayBayModel.Store.MayBay" Multiplicity="0..1" />
+    <End Role="LichBay" Type="QLChuyenBayVaVeMayBayModel.Store.LichBay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MayBay">
+        <PropertyRef Name="MaMB" />
+      </Principal>
+      <Dependent Role="LichBay">
+        <PropertyRef Name="MaMB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ve_ChuyenBay">
+    <End Role="ChuyenBay" Type="QLChuyenBayVaVeMayBayModel.Store.ChuyenBay" Multiplicity="1" />
+    <End Role="Ve" Type="QLChuyenBayVaVeMayBayModel.Store.Ve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChuyenBay">
+        <PropertyRef Name="MaCB" />
+      </Principal>
+      <Dependent Role="Ve">
+        <PropertyRef Name="MaCB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ve_HanhKhach">
+    <End Role="HanhKhach" Type="QLChuyenBayVaVeMayBayModel.Store.HanhKhach" Multiplicity="1" />
+    <End Role="Ve" Type="QLChuyenBayVaVeMayBayModel.Store.Ve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HanhKhach">
+        <PropertyRef Name="MaHK" />
+      </Principal>
+      <Dependent Role="Ve">
+        <PropertyRef Name="MaHK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
