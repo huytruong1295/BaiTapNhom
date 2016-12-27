@@ -41,7 +41,7 @@
             // 
             // txtmave
             // 
-            this.txtmave.Location = new System.Drawing.Point(112, 24);
+            this.txtmave.Location = new System.Drawing.Point(165, 20);
             this.txtmave.Name = "txtmave";
             this.txtmave.Size = new System.Drawing.Size(243, 26);
             this.txtmave.TabIndex = 7;
@@ -50,7 +50,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 26);
+            this.label6.Location = new System.Drawing.Point(59, 22);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 23);
             this.label6.TabIndex = 6;
@@ -62,9 +62,9 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtmave);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(177, 23);
+            this.groupBox1.Location = new System.Drawing.Point(146, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(523, 105);
+            this.groupBox1.Size = new System.Drawing.Size(523, 55);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kiểm tra thông tin";
@@ -72,9 +72,9 @@
             // btnkiemtra
             // 
             this.btnkiemtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnkiemtra.Location = new System.Drawing.Point(187, 134);
+            this.btnkiemtra.Location = new System.Drawing.Point(160, 96);
             this.btnkiemtra.Name = "btnkiemtra";
-            this.btnkiemtra.Size = new System.Drawing.Size(92, 31);
+            this.btnkiemtra.Size = new System.Drawing.Size(92, 56);
             this.btnkiemtra.TabIndex = 9;
             this.btnkiemtra.Text = "Kiểm tra";
             this.btnkiemtra.UseVisualStyleBackColor = true;
@@ -83,9 +83,9 @@
             // btntieptuc
             // 
             this.btntieptuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntieptuc.Location = new System.Drawing.Point(386, 134);
+            this.btntieptuc.Location = new System.Drawing.Point(362, 96);
             this.btntieptuc.Name = "btntieptuc";
-            this.btntieptuc.Size = new System.Drawing.Size(92, 31);
+            this.btntieptuc.Size = new System.Drawing.Size(92, 56);
             this.btntieptuc.TabIndex = 9;
             this.btntieptuc.Text = "Tiếp tục";
             this.btntieptuc.UseVisualStyleBackColor = true;
@@ -94,9 +94,9 @@
             // btnthoat
             // 
             this.btnthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthoat.Location = new System.Drawing.Point(608, 134);
+            this.btnthoat.Location = new System.Drawing.Point(577, 96);
             this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(92, 31);
+            this.btnthoat.Size = new System.Drawing.Size(92, 56);
             this.btnthoat.TabIndex = 9;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
@@ -105,9 +105,9 @@
             // dgvhanhkhach
             // 
             this.dgvhanhkhach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvhanhkhach.Location = new System.Drawing.Point(83, 171);
+            this.dgvhanhkhach.Location = new System.Drawing.Point(123, 173);
             this.dgvhanhkhach.Name = "dgvhanhkhach";
-            this.dgvhanhkhach.Size = new System.Drawing.Size(667, 183);
+            this.dgvhanhkhach.Size = new System.Drawing.Size(586, 183);
             this.dgvhanhkhach.TabIndex = 10;
             // 
             // DoiVe
