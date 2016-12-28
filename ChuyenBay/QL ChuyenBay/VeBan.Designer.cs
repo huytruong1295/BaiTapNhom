@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button btnthem;
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtmave = new System.Windows.Forms.TextBox();
             this.txtnoiban = new System.Windows.Forms.TextBox();
@@ -42,14 +43,27 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnexit = new System.Windows.Forms.Button();
             this.btnin = new System.Windows.Forms.Button();
-            this.btnthem = new System.Windows.Forms.Button();
             this.dgvve = new System.Windows.Forms.DataGridView();
+            btnthem = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvve)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnthem
+            // 
+            btnthem.BackColor = System.Drawing.SystemColors.ButtonFace;
+            btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnthem.Location = new System.Drawing.Point(210, 220);
+            btnthem.Name = "btnthem";
+            btnthem.Size = new System.Drawing.Size(92, 82);
+            btnthem.TabIndex = 24;
+            btnthem.Text = "Thêm";
+            btnthem.UseVisualStyleBackColor = false;
+            btnthem.Click += new System.EventHandler(this.btnthem_Click);
+            // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.groupBox2.Controls.Add(this.txtmave);
             this.groupBox2.Controls.Add(this.txtnoiban);
             this.groupBox2.Controls.Add(this.txtmahk);
@@ -76,6 +90,7 @@
             this.txtmave.Name = "txtmave";
             this.txtmave.Size = new System.Drawing.Size(226, 26);
             this.txtmave.TabIndex = 17;
+            this.txtmave.TextChanged += new System.EventHandler(this.txtmave_TextChanged);
             // 
             // txtnoiban
             // 
@@ -83,6 +98,7 @@
             this.txtnoiban.Name = "txtnoiban";
             this.txtnoiban.Size = new System.Drawing.Size(299, 26);
             this.txtnoiban.TabIndex = 16;
+            this.txtnoiban.TextChanged += new System.EventHandler(this.txtnoiban_TextChanged);
             // 
             // txtmahk
             // 
@@ -91,6 +107,7 @@
             this.txtmahk.Size = new System.Drawing.Size(299, 26);
             this.txtmahk.TabIndex = 0;
             this.txtmahk.Tag = "1";
+            this.txtmahk.TextChanged += new System.EventHandler(this.txtmahk_TextChanged);
             // 
             // txtgia
             // 
@@ -98,6 +115,7 @@
             this.txtgia.Name = "txtgia";
             this.txtgia.Size = new System.Drawing.Size(227, 26);
             this.txtgia.TabIndex = 12;
+            this.txtgia.TextChanged += new System.EventHandler(this.txtgia_TextChanged);
             // 
             // txtchuyenbay
             // 
@@ -105,6 +123,7 @@
             this.txtchuyenbay.Name = "txtchuyenbay";
             this.txtchuyenbay.Size = new System.Drawing.Size(226, 26);
             this.txtchuyenbay.TabIndex = 6;
+            this.txtchuyenbay.TextChanged += new System.EventHandler(this.txtchuyenbay_TextChanged);
             // 
             // label1
             // 
@@ -166,38 +185,31 @@
             // 
             // btnexit
             // 
+            this.btnexit.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnexit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexit.Location = new System.Drawing.Point(566, 220);
+            this.btnexit.Location = new System.Drawing.Point(585, 220);
             this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(75, 60);
+            this.btnexit.Size = new System.Drawing.Size(97, 82);
             this.btnexit.TabIndex = 22;
             this.btnexit.Text = "Thoát";
-            this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.UseVisualStyleBackColor = false;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
             // btnin
             // 
+            this.btnin.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnin.Location = new System.Drawing.Point(412, 220);
+            this.btnin.Location = new System.Drawing.Point(401, 220);
             this.btnin.Name = "btnin";
-            this.btnin.Size = new System.Drawing.Size(75, 60);
+            this.btnin.Size = new System.Drawing.Size(95, 82);
             this.btnin.TabIndex = 23;
             this.btnin.Text = "In vé";
-            this.btnin.UseVisualStyleBackColor = true;
-            // 
-            // btnthem
-            // 
-            this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(251, 220);
-            this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(74, 60);
-            this.btnthem.TabIndex = 24;
-            this.btnthem.Text = "Thêm";
-            this.btnthem.UseVisualStyleBackColor = true;
-            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
+            this.btnin.UseVisualStyleBackColor = false;
+            this.btnin.Click += new System.EventHandler(this.btnin_Click);
             // 
             // dgvve
             // 
+            this.dgvve.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvve.Location = new System.Drawing.Point(176, 317);
             this.dgvve.Name = "dgvve";
@@ -209,9 +221,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(893, 475);
             this.Controls.Add(this.dgvve);
-            this.Controls.Add(this.btnthem);
+            this.Controls.Add(btnthem);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btnin);
             this.Controls.Add(this.groupBox2);
@@ -240,7 +253,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.Button btnin;
-        private System.Windows.Forms.Button btnthem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvve;
         private System.Windows.Forms.TextBox txtmave;

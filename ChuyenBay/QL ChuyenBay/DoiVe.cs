@@ -28,7 +28,7 @@ namespace QL_ChuyenBay
             
             cnstr = "Server = .\\TRUONGHUY; Database= QLChuyenBayVaVeMayBay; Integrated security = true";
             cn = new SqlConnection(cnstr);
-             string sql = "select * from Ve";
+            string sql = "select Ve.*, ChuyenBay.NgayGioCatCanh from Ve, ChuyenBay where ChuyenBay.MaCB=Ve.MaCB";
             db = GetDataset(sql).Tables[0];
             dgvhanhkhach.DataSource = GetDataset(sql).Tables[0];
             
@@ -55,8 +55,24 @@ namespace QL_ChuyenBay
         }
         private void btnkiemtra_Click(object sender, EventArgs e)
         {
-            string sql = "select * from Ve where MaVe = '" + txtmave.Text + "'";
-            dgvhanhkhach.DataSource = GetDataset(sql).Tables[0];
+
+            if (rdbtnmave.Checked == true)
+            {
+                string sql = "select Ve.*, ChuyenBay.NgayGioCatCanh from Ve, ChuyenBay where ChuyenBay.MaCB=Ve.MaCB and MaVe = '" + txtmave.Text + "'";
+                dgvhanhkhach.DataSource = GetDataset(sql).Tables[0];
+            }
+            if (rdbtnten.Checked == true)
+            {
+                string sql = "select * from HanhKhach where SoCMND = '" + txtmave.Text + "'";
+                dgvhanhkhach.DataSource = GetDataset(sql).Tables[0];
+            }
+            if (rdbtnhanhkhach.Checked == true)
+            {
+                string sql = "select Ve.*, ChuyenBay.NgayGioCatCanh from Ve, ChuyenBay where ChuyenBay.MaCB=Ve.MaCB and MaHK = '" + txtmave.Text + "'";
+                dgvhanhkhach.DataSource = GetDataset(sql).Tables[0];
+ 
+            }
+            
         }
 
         private void btnthoat_Click(object sender, EventArgs e)
@@ -70,12 +86,19 @@ namespace QL_ChuyenBay
         private void btntieptuc_Click(object sender, EventArgs e)
         {
             Thongtinvedoi f = new Thongtinvedoi();
-            f.ShowDialog();
+            f.Show();
         }
 
-        private void txtmave_TextChanged(object sender, EventArgs e)
+        private void dgvhanhkhach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void rdbtnhanhkhach_CheckedChanged(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

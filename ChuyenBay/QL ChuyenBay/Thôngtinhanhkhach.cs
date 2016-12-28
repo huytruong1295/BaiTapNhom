@@ -98,17 +98,7 @@ namespace QL_ChuyenBay
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            txtmahk.Text = dataGridView1.Rows[index].Cells[0].Value.ToString();
          
-            txthohk.Text = dataGridView1.Rows[index].Cells[1].Value.ToString();
-            txttenhk.Text = dataGridView1.Rows[index].Cells[2].Value.ToString();
-            txtdienthoai.Text = dataGridView1.Rows[index].Cells[3].Value.ToString();
-            txtdiachi.Text = dataGridView1.Rows[index].Cells[4].Value.ToString();
-          
-          
-            
-
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -121,12 +111,12 @@ namespace QL_ChuyenBay
                 cmd.CommandText = "uspAddHanhKhach";
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@MaHK", txtmahk.Text));
-                cmd.Parameters.Add(new SqlParameter("@HoHK", txthohk.Text));
-                cmd.Parameters.Add(new SqlParameter("@TenHK", txttenhk.Text));
-                cmd.Parameters.Add(new SqlParameter("@SoDT", txtdienthoai.Text));
-                cmd.Parameters.Add(new SqlParameter("@DiaChi", txtdiachi.Text));
-
+                cmd.Parameters.Add(new SqlParameter("@MaHK", textBox5.Text));
+                cmd.Parameters.Add(new SqlParameter("@HoHK", textBox4.Text));
+                cmd.Parameters.Add(new SqlParameter("@TenHK", textBox3.Text));
+                cmd.Parameters.Add(new SqlParameter("@SoDT", textBox1.Text));
+                cmd.Parameters.Add(new SqlParameter("@DiaChi", textBox2.Text));
+                cmd.Parameters.Add(new SqlParameter("@SoCMND", txtcmnd.Text));
                 cmd.ExecuteNonQuery();
                 dataGridView1.DataSource = GetDataset(sql).Tables[0];
                 MessageBox.Show("Thêm thành công !!", "Thông Báo");
@@ -154,9 +144,7 @@ namespace QL_ChuyenBay
                 cmd.CommandText = "uspDelHanhKhach";
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@MaHK", txtmahk.Text));
-      
-
+                cmd.Parameters.Add(new SqlParameter("@MaHK", textBox5.Text));
                 cmd.ExecuteNonQuery();
                 dataGridView1.DataSource = GetDataset(sql).Tables[0];
                 MessageBox.Show("Xóa thành công !!", "Thông Báo");
@@ -184,6 +172,26 @@ namespace QL_ChuyenBay
         private void button1_Click(object sender, EventArgs e)
         {
             ds.RejectChanges();   
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            textBox5.Text = dataGridView1.Rows[index].Cells[0].Value.ToString();
+            textBox4.Text = dataGridView1.Rows[index].Cells[1].Value.ToString();
+            textBox3.Text = dataGridView1.Rows[index].Cells[2].Value.ToString();
+            textBox1.Text = dataGridView1.Rows[index].Cells[3].Value.ToString();
+            textBox2.Text = dataGridView1.Rows[index].Cells[4].Value.ToString();
         }
     }
 }

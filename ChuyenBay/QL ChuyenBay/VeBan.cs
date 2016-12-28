@@ -70,7 +70,7 @@ namespace QL_ChuyenBay
                 cmd.Parameters.Add(new SqlParameter("@MaVe", txtmave.Text));
                 cmd.Parameters.Add(new SqlParameter("@MaHK", txtmahk.Text));
                 cmd.Parameters.Add(new SqlParameter("@MaCB", txtchuyenbay.Text));
-                cmd.Parameters.Add(new SqlParameter("@NoiBan", txtnoiban.Text));
+                cmd.Parameters.Add(new SqlParameter("@ChoNgoi", txtnoiban.Text));
                 cmd.Parameters.Add(new SqlParameter("@GiaVe", txtgia.Text));
 
                 cmd.ExecuteNonQuery();
@@ -101,6 +101,10 @@ namespace QL_ChuyenBay
         {
              int index = e.RowIndex;
              txtmave.Text = dgvve.Rows[index].Cells[0].Value.ToString();
+             txtmahk.Text = dgvve.Rows[index].Cells[1].Value.ToString();
+             txtchuyenbay.Text = dgvve.Rows[index].Cells[2].Value.ToString();
+             txtnoiban.Text = dgvve.Rows[index].Cells[3].Value.ToString();
+             txtgia.Text = dgvve.Rows[index].Cells[4].Value.ToString();
    
 
         }
@@ -108,6 +112,39 @@ namespace QL_ChuyenBay
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtgia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnoiban_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmahk_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmave_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtchuyenbay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnin_Click(object sender, EventArgs e)
+        {
+            InVe f = new InVe();
+            f.Show();
+           
+            
         }
     }
 }

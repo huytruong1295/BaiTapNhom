@@ -119,12 +119,13 @@ namespace QL_ChuyenBay
                 
                 cmd.Parameters.Add(new SqlParameter("@MaVe", txtmave.Text));
                 cmd.Parameters.Add(new SqlParameter("@MaCB", txtchuyenbay.Text));
+                cmd.Parameters.Add(new SqlParameter("@ChoNgoi", txtnoiban.Text));
                 cmd.Parameters.Add(new SqlParameter("@GiaVe", txtgia.Text));
 
 
                 cmd.ExecuteNonQuery();
                 dataGridView1.DataSource = GetDataset(sql).Tables[0];
-                MessageBox.Show("Sữa thành công !!", "Thông Báo");
+                MessageBox.Show("Sửa thành công !!", "Thông Báo");
 
             }
             catch (Exception ex)
@@ -146,19 +147,11 @@ namespace QL_ChuyenBay
                 this.Close();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+
+        private void btnkiemtra_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtchuyenbay_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            string sql = "select Ve.* from Ve where MaVe = '" + textBox1.Text + "'";
+            dataGridView1.DataSource = GetDataset(sql).Tables[0];
         }
     }
 }

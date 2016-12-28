@@ -43,10 +43,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.cbbdiemden);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(81, 12);
             this.groupBox1.Name = "groupBox1";
@@ -54,6 +56,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhập";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBox1
             // 
@@ -95,39 +98,47 @@
             // 
             // btnkiemtra
             // 
-            this.btnkiemtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnkiemtra.Location = new System.Drawing.Point(229, 133);
+            this.btnkiemtra.BackColor = System.Drawing.SystemColors.Control;
+            this.btnkiemtra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnkiemtra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnkiemtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnkiemtra.Location = new System.Drawing.Point(178, 133);
             this.btnkiemtra.Name = "btnkiemtra";
-            this.btnkiemtra.Size = new System.Drawing.Size(96, 68);
+            this.btnkiemtra.Size = new System.Drawing.Size(100, 78);
             this.btnkiemtra.TabIndex = 1;
             this.btnkiemtra.Text = "Kiểm Tra";
-            this.btnkiemtra.UseVisualStyleBackColor = true;
+            this.btnkiemtra.UseVisualStyleBackColor = false;
             this.btnkiemtra.Click += new System.EventHandler(this.btnkiemtra_Click);
             // 
             // btnbanve
             // 
-            this.btnbanve.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbanve.Location = new System.Drawing.Point(354, 133);
+            this.btnbanve.BackColor = System.Drawing.SystemColors.Control;
+            this.btnbanve.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnbanve.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbanve.Location = new System.Drawing.Point(353, 133);
             this.btnbanve.Name = "btnbanve";
-            this.btnbanve.Size = new System.Drawing.Size(96, 68);
+            this.btnbanve.Size = new System.Drawing.Size(109, 78);
             this.btnbanve.TabIndex = 1;
             this.btnbanve.Text = "Bán Vé";
-            this.btnbanve.UseVisualStyleBackColor = true;
+            this.btnbanve.UseVisualStyleBackColor = false;
             this.btnbanve.Click += new System.EventHandler(this.btnbanve_Click);
             // 
             // btnthoat
             // 
-            this.btnthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthoat.Location = new System.Drawing.Point(479, 133);
+            this.btnthoat.BackColor = System.Drawing.SystemColors.Control;
+            this.btnthoat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthoat.Location = new System.Drawing.Point(534, 133);
             this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(96, 68);
+            this.btnthoat.Size = new System.Drawing.Size(108, 78);
             this.btnthoat.TabIndex = 1;
             this.btnthoat.Text = "Thoát";
-            this.btnthoat.UseVisualStyleBackColor = true;
+            this.btnthoat.UseVisualStyleBackColor = false;
             this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // dgvkiemtra
             // 
+            this.dgvkiemtra.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvkiemtra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvkiemtra.Location = new System.Drawing.Point(45, 228);
             this.dgvkiemtra.Name = "dgvkiemtra";
@@ -139,6 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(820, 420);
             this.Controls.Add(this.dgvkiemtra);
             this.Controls.Add(this.btnthoat);
@@ -162,11 +174,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnkiemtra;
         private System.Windows.Forms.Button btnbanve;
         private System.Windows.Forms.Button btnthoat;
         private System.Windows.Forms.DataGridView dgvkiemtra;
         private System.Windows.Forms.ComboBox cbbdiemden;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnkiemtra;
     }
 }

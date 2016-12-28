@@ -38,9 +38,9 @@
             // 
             // btnbanve
             // 
-            this.btnbanve.BackColor = System.Drawing.Color.Yellow;
+            this.btnbanve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnbanve.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbanve.ForeColor = System.Drawing.Color.Red;
+            this.btnbanve.ForeColor = System.Drawing.Color.Black;
             this.btnbanve.Location = new System.Drawing.Point(160, 108);
             this.btnbanve.Name = "btnbanve";
             this.btnbanve.Size = new System.Drawing.Size(130, 84);
@@ -51,9 +51,9 @@
             // 
             // btndoive
             // 
-            this.btndoive.BackColor = System.Drawing.Color.Yellow;
+            this.btndoive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btndoive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndoive.ForeColor = System.Drawing.Color.Red;
+            this.btndoive.ForeColor = System.Drawing.Color.Black;
             this.btndoive.Location = new System.Drawing.Point(452, 108);
             this.btndoive.Name = "btndoive";
             this.btndoive.Size = new System.Drawing.Size(130, 84);
@@ -64,9 +64,9 @@
             // 
             // lbname
             // 
-            this.lbname.BackColor = System.Drawing.Color.Yellow;
+            this.lbname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.Color.Red;
+            this.lbname.ForeColor = System.Drawing.Color.Black;
             this.lbname.Location = new System.Drawing.Point(12, 13);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(743, 58);
@@ -77,9 +77,9 @@
             // 
             // btnthoa
             // 
-            this.btnthoa.BackColor = System.Drawing.Color.Yellow;
+            this.btnthoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnthoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthoa.ForeColor = System.Drawing.Color.Red;
+            this.btnthoa.ForeColor = System.Drawing.Color.Black;
             this.btnthoa.Location = new System.Drawing.Point(226, 236);
             this.btnthoa.Name = "btnthoa";
             this.btnthoa.Size = new System.Drawing.Size(286, 44);
@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(767, 303);
             this.Controls.Add(this.btnthoa);
             this.Controls.Add(this.lbname);

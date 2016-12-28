@@ -19,3 +19,6 @@ C:\Users\User\Desktop\QLChuyenBay\ChuyenBay\QL ChuyenBay\obj\x86\Debug\QL_Chuyen
 C:\Users\User\Desktop\QLChuyenBay\ChuyenBay\QL ChuyenBay\obj\x86\Debug\QL_ChuyenBay.Main.resources
 C:\Users\User\Desktop\QLChuyenBay\ChuyenBay\QL ChuyenBay\obj\x86\Debug\QL_ChuyenBay.Thongtinvedoi.resources
 C:\Users\User\Desktop\QLChuyenBay\ChuyenBay\QL ChuyenBay\obj\x86\Debug\QL_ChuyenBay.VeBan.resources
+C:\Users\User\Desktop\QLChuyenBay\ChuyenBay\QL ChuyenBay\obj\x86\Debug\QL_ChuyenBay.InVe.resources
+C:\Users\User\Desktop\QLChuyenBay\ChuyenBay\QL ChuyenBay\obj\x86\Debug\RdlCompile.cache
+C:\Users\User\Desktop\QLChuyenBay\ChuyenBay\QL ChuyenBay\obj\x86\Debug\RdlCompile.compiled

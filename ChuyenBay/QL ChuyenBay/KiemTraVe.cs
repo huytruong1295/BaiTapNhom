@@ -26,7 +26,7 @@ namespace QL_ChuyenBay
         {
             cnstr = "Server = .\\TRUONGHUY; Database= QLChuyenBayVaVeMayBay; Integrated security = true";
             cn = new SqlConnection(cnstr);
-            string sql = " select ChuyenBay.MaCB, MayBay.MaMB, HangTrinh.DiemDi, HangTrinh.DiemDen, ChuyenBay.NgayGioCatCanh, ChuyenBay.NgayGioHaCanh,  MayBay.SoGheDaDat, MayBay.SoGheTG, MayBay.TongSoGhe from ChuyenBay, HangTrinh, MayBay where MayBay.MaMB=ChuyenBay.MaMB and HangTrinh.MaHT=ChuyenBay.MaHT ";
+            string sql = " select ChuyenBay.MaCB, MayBay.MaMB, HangTrinh.DiemDi, HangTrinh.DiemDen, ChuyenBay.NgayGioCatCanh, ChuyenBay.NgayGioHaCanh, MayBay.TongSoGhe from ChuyenBay, HangTrinh, MayBay where MayBay.MaMB=ChuyenBay.MaMB and HangTrinh.MaHT=ChuyenBay.MaHT ";
             db = GetDataset(sql).Tables[0];
             dgvkiemtra.DataSource = GetDataset(sql).Tables[0];
 
@@ -84,13 +84,18 @@ namespace QL_ChuyenBay
 
         private void btnkiemtra_Click(object sender, EventArgs e)
         {
-            string sql = "select ChuyenBay.MaCB, MayBay.MaMB, HangTrinh.DiemDi, HangTrinh.DiemDen, ChuyenBay.NgayGioCatCanh, ChuyenBay.NgayGioHaCanh,  MayBay.SoGheDaDat, MayBay.SoGheTG, MayBay.TongSoGhe from ChuyenBay, HangTrinh, MayBay where MayBay.MaMB=ChuyenBay.MaMB and HangTrinh.MaHT=ChuyenBay.MaHT and DiemDen= '" + cbbdiemden.Text + "'";
+            string sql = "select ChuyenBay.MaCB, MayBay.MaMB, HangTrinh.DiemDi, HangTrinh.DiemDen, ChuyenBay.NgayGioCatCanh, ChuyenBay.NgayGioHaCanh, MayBay.TongSoGhe from ChuyenBay, HangTrinh, MayBay where MayBay.MaMB=ChuyenBay.MaMB and HangTrinh.MaHT=ChuyenBay.MaHT and DiemDen= '" + cbbdiemden.Text + "'";
             dgvkiemtra.DataSource = GetDataset(sql).Tables[0];
         }
 
         private void dgvkiemtra_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
 
